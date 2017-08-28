@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box; 
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: sans-serif; 
+  min-height: 100vh;
+	background: 
+	  linear-gradient(45deg, hsla(340, 100%, 55%, 0.5) 0%, hsla(340, 100%, 55%, 0) 30%),
+    linear-gradient(135deg, hsla(225, 95%, 50%, 0.5) 10%, hsla(225, 95%, 50%, 0) 60%),
+    linear-gradient(225deg, hsla(140, 90%, 50%, 0.5) 10%, hsla(140, 90%, 50%, 0) 90%),
+    linear-gradient(315deg, hsla(35, 95%, 55%, 0.5) 100%, hsla(35, 95%, 55%, 0) 90%);
+}
+.container {
+  margin: 120px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 20px; 
+}
+.box {
+  background: rgba(239, 239, 239, 1.0);
+  box-shadow: 0 3px 3px rgba(0,0,0,0.3); 
+  border-radius: 0.5em;
+  display: grid;
+  grid-template: auto / auto;
+  grid-gap: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  padding: 50px 50px 0px 50px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  text-align: center;
+}
+p {
+  font-size: 20px; 
+  padding: 10px 50px 100px 50px;
+}
+img {
+  padding: 20px 50px 0px 50px;
+  width: 100%;
+}
+  
+hr {
+  display: none;
+}
+.one {
+}
+.two {
+  /*
+  grid-row-start: 1;
+  grid-row-end: 3;
+  */
+}
+.four {
+  grid-column-end: span 2;
+}
+.seven {
+  grid-column-end: span 2;
+}
+.box:hover {
+  transform:scale(1.01)
+}
+@media (max-width: 750px) {
+  .container {
+    margin: 20px;
+  }
+  .one, .two, .three, .four,.five,.six,.seven {
+    grid-column-end: span 4;
+  }
+}
+
