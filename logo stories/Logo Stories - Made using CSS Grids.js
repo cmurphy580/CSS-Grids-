@@ -58,3 +58,4 @@ seven.innerHTML = `
   <hr>
   <p>${info.seven.description}</p>
 `;
+
